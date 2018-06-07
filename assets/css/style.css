@@ -14,5 +14,16 @@ h5 {
     width: 240px;
     height: 300px;
     float: left;
+    align-self: auto;
 
+}
+# ruby {
+    float: left;
+    width: 25%;
+    align-self: auto;
+}
+# emerald {
+    float: left;
+    width: 25%;
+    align-self: auto;
 }

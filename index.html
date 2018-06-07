@@ -12,58 +12,34 @@
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-
+        
 </head>
 
 <body>
+
+        <script src="assets/javascript/game.js"></script>
+
     <h1>CrystalsCollector!</h1>
 
     <h5>instructions here</h5>
     <div class="randNum"></div>
     <div class="winsLosses"></div>
     <div class="crystals">
-        <img id="ruby" class="crystals" src="assets/images/ruby.jpg" alt="Ruby">
-        <img id="emerald" class="crystals" src="assets/images/emerald.jpg" alt="Emerald">
-        <img id="diamond" class="crystals" src="assets/images/diamond.jpg" alt="Diamond">
-        <img id="sapphire" class="crystals" src="assets/images/sapphire.jpg" alt="Sapphire">
+        <p>
+            <img id="ruby" class="crystals" src="assets/images/ruby.jpg" alt="Ruby">
+        </p>
+        <p>
+            <img id="emerald" class="crystals" src="assets/images/emerald.jpg" alt="Emerald">
+        </p>
+        <p>
+            <img id="diamond" class="crystals" src="assets/images/diamond.jpg" alt="Diamond">
+        </p>
+        <p>
+            <img id="sapphire" class="crystals" src="assets/images/sapphire.jpg" alt="Sapphire">
+        </p>
 
     </div>
     <div class="myScore"></div>
-
-    <script>
-        $(document).ready(function () {
-            var score = 0;
-            var hidden = random(20, 121);
-            var rubyVal = random(2, 13);
-            var emeraldVal = random(2, 13);
-            var diamondVal = random(2, 13);
-            var sapphireVal = random(2, 13);
-            
-            function random(y, z) {
-                return (Math.floor(Math.random() * (z - y)) + y);
-            };
-            console.log(hidden);
-            console.log(rubyVal);
-            console.log(emeraldVal);
-            console.log(diamondVal);
-            console.log(sapphireVal);
-
-            
-            $("#ruby").on("click", function () {
-                alert("You clicked the Ruby");
-            })
-            $("#emerald").on("click", function () {
-                alert("You clicked the Emerald");
-            })
-            $("#diamond").on("click", function () {
-                alert("You clicked the Diamond");
-            })
-            $("#sapphire").on("click", function () {
-                alert("You clicked the Sapphire");
-            })
-
-        });
-    </script>
 
 
 

@@ -1,1 +1,86 @@
 // javascript
+//<script>
+$(document).ready(function () {
+
+    var wins = 0;
+    var loss = 0;
+    var score = 0;
+    var hidden = random(20, 121);
+    var rubyVal = random(2, 13);
+    var emeraldVal = random(2, 13);
+    var diamondVal = random(2, 13);
+    var sapphireVal = random(2, 13);
+
+    function random(y, z) {
+        return (Math.floor(Math.random() * (z - y)) + y);
+    };
+    console.log(hidden);
+    console.log(rubyVal);
+    console.log(emeraldVal);
+    console.log(diamondVal);
+    console.log(sapphireVal);
+    function winLoss() {
+        if (score < hidden) {
+            console.log("keep going");
+        }
+        else if (score === hidden) {
+            wins++;
+            alert("You win!!  Click any Cystal to begin again");
+            tally();
+            reset();
+        }
+        else {
+            loss++;
+            alert("You lose!! Click any Crystal to begin again");
+            tally();
+            reset();
+        }
+    }
+
+
+    $("#ruby").on("click", function () {
+        score = score + rubyVal;
+        alert(score);
+        winLoss();
+    })
+    $("#emerald").on("click", function () {
+        //   alert("You clicked the Emerald");
+        score = score + emeraldVal;
+        alert(score);
+        winLoss();
+    })
+    $("#diamond").on("click", function () {
+        // alert("You clicked the Diamond");
+        score = score + diamondVal;
+        alert(score);
+        winLoss();
+    })
+    $("#sapphire").on("click", function () {
+        // alert("You clicked the Sapphire");
+        score = score + sapphireVal;
+        alert(score);
+        winLoss();
+    })
+    function tally() {
+        $(".myScore").html("<h1>Points: " + score + "</h1><p>Wins: " + wins +
+            "</p><p>Losses: " + loss + "</p>");
+    }
+    function reset() {
+        score = 0;
+        hidden = random(20, 121);
+        rubyVal = random(2, 13);
+        emeraldVal = random(2, 13);
+        diamondVal = random(2, 13);
+        sapphireVal = random(2, 13);
+        console.log(hidden);
+        console.log(rubyVal);
+        console.log(emeraldVal);
+        console.log(diamondVal);
+        console.log(sapphireVal);
+        //ask why "var" messed it up
+    };
+
+
+});
+//</script>
+
