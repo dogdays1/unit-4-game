@@ -1,5 +1,5 @@
 // javascript
-//<script>
+
 $(document).ready(function () {
 
     var wins = 0;
@@ -90,5 +90,5 @@ $(document).ready(function () {
 
 
 });
-//</script>
+
 
