@@ -14,6 +14,8 @@ $(document).ready(function () {
     function random(y, z) {
         return (Math.floor(Math.random() * (z - y)) + y);
     };
+    randNum ();
+    tally ();
     console.log(hidden);
     console.log(rubyVal);
     console.log(emeraldVal);
@@ -22,6 +24,7 @@ $(document).ready(function () {
     function winLoss() {
         if (score < hidden) {
             console.log("keep going");
+            tally ();
         }
         else if (score === hidden) {
             wins++;
@@ -62,8 +65,11 @@ $(document).ready(function () {
         winLoss();
     })
     function tally() {
-        $(".myScore").html("<h1>Points: " + score + "</h1><p>Wins: " + wins +
+        $(".myScore").html("<p>Points: " + score + "</p><p>Wins: " + wins +
             "</p><p>Losses: " + loss + "</p>");
+    }
+    function randNum () {
+        $(".randNum").html(hidden);
     }
     function reset() {
         score = 0;
@@ -72,6 +78,7 @@ $(document).ready(function () {
         emeraldVal = random(2, 13);
         diamondVal = random(2, 13);
         sapphireVal = random(2, 13);
+        randNum ();
         console.log(hidden);
         console.log(rubyVal);
         console.log(emeraldVal);
