@@ -28,40 +28,41 @@ $(document).ready(function () {
         }
         else if (score === hidden) {
             wins++;
-            alert("You win!!  Click any Cystal to begin again");
             tally();
             reset();
+            alert("You win!!  Click any Cystal to begin again");
+            //figure out why alert showing before tally and reset run
         }
         else {
             loss++;
-            alert("You lose!! Click any Crystal to begin again");
             tally();
             reset();
+            alert("You lose!! Click any Crystal to begin again");
         }
     }
 
 
     $("#ruby").on("click", function () {
         score = score + rubyVal;
-        alert(score);
+        // alert(score);
         winLoss();
     })
     $("#emerald").on("click", function () {
         //   alert("You clicked the Emerald");
         score = score + emeraldVal;
-        alert(score);
+        // alert(score);
         winLoss();
     })
     $("#diamond").on("click", function () {
         // alert("You clicked the Diamond");
         score = score + diamondVal;
-        alert(score);
+        // alert(score);
         winLoss();
     })
     $("#sapphire").on("click", function () {
         // alert("You clicked the Sapphire");
         score = score + sapphireVal;
-        alert(score);
+        // alert(score);
         winLoss();
     })
     function tally() {
@@ -84,7 +85,7 @@ $(document).ready(function () {
         console.log(emeraldVal);
         console.log(diamondVal);
         console.log(sapphireVal);
-        //ask why "var" messed it up
+        //ask a TA why "var" messed it up
     };
 
 
