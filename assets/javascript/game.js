@@ -31,7 +31,7 @@ $(document).ready(function () {
             reset();
             tally();
             setTimeout(function () {
-                alert("You win!!  I've given you a new target.  Click any Cystal to begin again");
+                alert("You win!!  I've given you a new target.  Click any Crystal to begin again");
               }, 1000)
             //figure out why alert showing before tally and reset run, async problem? need timer??
         }
