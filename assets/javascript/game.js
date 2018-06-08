@@ -28,16 +28,21 @@ $(document).ready(function () {
         }
         else if (score === hidden) {
             wins++;
-            tally();
             reset();
-            alert("You win!!  Click any Cystal to begin again");
-            //figure out why alert showing before tally and reset run
+            tally();
+            setTimeout(function () {
+                alert("You win!!  I've given you a new target.  Click any Cystal to begin again");
+              }, 1000)
+            //figure out why alert showing before tally and reset run, async problem? need timer??
         }
         else {
             loss++;
-            tally();
             reset();
-            alert("You lose!! Click any Crystal to begin again");
+            tally();
+            setTimeout(function () {
+                alert("You went over and lost! I've given you a new target.  Click any Crystal to begin again.");
+              }, 1000)           
+         //   alert("You lose!! Click any Crystal to begin again");
         }
     }
 
